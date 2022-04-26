@@ -10,7 +10,7 @@ brew install redis
 ## Generate .proto
 
 ```
-make build && cp ./protos/service.pb.go .server/proto/ && cp ./protos/service.pb.go .client/proto/
+make build && cp proto/service.pb.go server/proto/ && cp proto/service.pb.go client/proto/
 ```
 
 ## Build Docker Images
