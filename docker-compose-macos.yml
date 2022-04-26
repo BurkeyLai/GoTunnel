@@ -1,0 +1,34 @@
+version: '3'
+services:
+  proxy:
+    build:
+      context: ./envoy
+      dockerfile: Dockerfile.macos
+    ports:
+      - "8080:8080"
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "9090:9090"
+    depends_on:
+      - proxy
+  web-client:
+    build:
+      context: ./js-client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server
+      - proxy
+    tty: true
+  redis:
+    container_name: "redis"
+    image: redis:alpine
+    command: redis-server /usr/local/etc/redis/redis.conf --requirepass p@ssword
+    ports: 
+      - "6379:6379"
+    volumes: 
+      - $PWD/redis.conf:/usr/local/etc/redis/redis.conf

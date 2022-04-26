@@ -1,0 +1,15 @@
+.messages_box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 70px 10px 0;
+    background-color: #030C04;
+  }
+  
+  .messages {
+    overflow: scroll;
+    height: 85vh;
+    padding-bottom: 20px;
+  }

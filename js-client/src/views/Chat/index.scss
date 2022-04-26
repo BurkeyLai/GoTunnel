@@ -1,0 +1,18 @@
+.chatroom {
+    display: flex;
+  }
+
+.loading_box {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  padding: 3px 20px;
+  width: 90%;
+  height: 75px;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #06c429;
+  border-radius: 8px;
+}

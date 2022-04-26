@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "./proto/";
+
+message Channel {
+  string name = 1;
+  string id = 2;
+}
+
+message Tunnel {
+  string id = 1;
+  string user1 = 2;
+  string user2 = 3;
+}
+
+message User {
+  string id = 1;
+  string name = 2;
+  Channel channel = 3;
+  Tunnel tunnel = 4;
+}
+
+message Message {
+  string id = 1;
+  string name = 2;
+  string content = 3;
+  string timestamp = 4;
+  Channel channel = 5;
+  Tunnel tunnel = 6;
+}
+
+message Connect {
+  User user = 1;
+  bool active = 2;
+  Channel channel = 3;
+}
+
+message Close {}
+
+service Broadcast {
+  rpc CreateStream(Connect) returns (stream Message) {}
+  rpc BroadcastMessage(Message) returns (Close) {}
+}

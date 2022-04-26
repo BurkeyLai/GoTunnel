@@ -1,0 +1,60 @@
+.message_box_footer {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  padding: 3px 20px;
+  width: 90%;
+  height: 75px;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #051407;
+  border-radius: 8px;
+
+  .icons {
+    position: relative;
+    > div {
+      display: inline-block;
+      margin-right: 25px;
+    }
+
+    img {
+      vertical-align: middle;
+      cursor: pointer;
+    }
+  }
+
+  .emoji-picker-react {
+    position: absolute;
+    bottom: 65px;
+    box-shadow: none;
+  }
+
+  .upload_img {
+    position: relative;
+    input {
+      position: absolute;
+      width: 30px;
+      opacity: 0;
+    }
+  }
+
+  .message_input {
+    width: 85%;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 20px;
+    color: #05fc4b;
+    border-left: 1px solid #05fc4b;
+    background-color: #051407;
+  }
+
+  .message_input::placeholder {
+    color: #05fc4b;
+  }
+
+  .send_button {
+    background-color: #051407;
+  }
+}

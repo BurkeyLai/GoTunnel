@@ -1,0 +1,73 @@
+.main_join {
+    height: 100vh;
+    padding: 120px 0 0;
+    background: #030C04
+  }
+  
+  .setting_card {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #000;
+    border-radius: 21px;
+    text-align: center;
+  
+    .buttons{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .welcome {
+      color: #fff;
+      font-size: 42px;
+    }
+    
+    .brand {
+      margin-bottom: 30px;
+      color: #05fc4b;
+      font-size: 48px;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 2px;
+    }
+  }
+  
+  
+  .setting_card_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+  
+    .input_username {
+      width: 100%;
+      padding: 10px 15px;
+      margin: 20px 0;
+      background: #051407;
+      color: #05fc4b;
+      border-radius: 5px;
+    }
+  
+    .role {
+      height: 205px;
+    }
+  
+    .input_username::placeholder {
+      color: #069e2f;
+    }
+  
+    .button_enter {
+      width: 160px;
+      padding: 7px 0;
+      color: #05fc4b;
+      font-size: 20px;
+      font-weight: 700;
+      background-color: #051407;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+  }
