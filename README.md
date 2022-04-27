@@ -1,12 +1,5 @@
 # Inspired by 'Building a realtime dashboard with ReactJS, Go, gRPC, and Envoy' medium post
 
-## Install Redis
-
-```
-brew update
-brew install redis
-```
-
 ## Generate .proto
 
 ```

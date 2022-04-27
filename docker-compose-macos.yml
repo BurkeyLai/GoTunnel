@@ -27,7 +27,7 @@ services:
   redis:
     container_name: "redis"
     image: redis:alpine
-    command: redis-server /usr/local/etc/redis/redis.conf --requirepass p@ssword
+    command: redis-server /usr/local/etc/redis/redis.conf #--requirepass p@ssword
     ports: 
       - "6379:6379"
     volumes: 
